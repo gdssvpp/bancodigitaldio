@@ -1,8 +1,15 @@
 package BancoDigital;
 
-public class ContaCorrente {
-    public static void main(String[] args) {
+public class ContaCorrente extends Conta{
 
-        System.out.println("Teste das funções");
+    public ContaCorrente(Cliente cliente) {
+        super(cliente);
     }
+
+    @Override
+    public void imprimirExtrato() {
+        System.out.println("=== Extrato Conta Corrente ===");
+        super.imprimirInfosComuns();
+    }
+
 }
